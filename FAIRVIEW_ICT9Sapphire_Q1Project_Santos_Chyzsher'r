@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fried & Flyin</title>
+</head>
+<body>
+    <header class="bg-warning text-dark text-center py-4">
+        <h1>Fried & Flyin</h1>
+        <p>Your go-to shop for delicious fried chicken!</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fried & Flyin</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section id="products" class="container mt-5">
+    <h2 class="text-center">Our Chicken Products</h2>
+    <div class="row">
+        <!-- Existing Items -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.gimmesomeoven.com/wp-content/uploads/2015/05/Oven-Baked-Chicken-Breast-Recipe-3.jpg" class="card-img-top" alt="Chicken Breast">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Breast</h5>
+                    <p class="card-text">₱400 per kg</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Breast">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2019/2/19/1/FN_Air-Fryer-Chicken-Wings-H_s4x3.jpg" class="card-img-top" alt="Chicken Wings">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Wings</h5>
+                    <p class="card-text">₱350 per kg</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Wings">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScH3Sryzo5jMgDTOMazMkumcQdXxmI78BYag&s" class="card-img-top" alt="Chicken Thighs">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Thighs</h5>
+                    <p class="card-text">₱400 per kg</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Thighs">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+        <!-- New Items -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.thespruceeats.com/thmb/eDlt7A0m92-R4Yz4kYr-2p4B8Vg=/1500x0/filters:no_upscale%2Cmax_bytes(150000)%2Cquality(90)/soul-food-fried-chicken-5d1a5aa9a137c700081d7c35.jpg" class="card-img-top" alt="Fried Chicken">
+                <div class="card-body">
+                    <h5 class="card-title">Fried Chicken</h5>
+                    <p class="card-text">₱450 per kg</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Fried Chicken">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.simplyrecipes.com/thmb/8nd9e0bHte2B0Fbtb-bX7BbI3VI=/1500x0/filters:no_upscale%2Cmax_bytes(150000)%2Cquality(90)/Simply-Recipes-Whole-Fried-Chicken-LEAD-1-2-cc7cf5c486564e75b7a3ff1bb25dcf96.jpg" class="card-img-top" alt="Whole Fried Chicken">
+                <div class="card-body">
+                    <h5 class="card-title">Whole Fried Chicken</h5>
+                    <p class="card-text">₱800 each</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Whole Fried Chicken">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.recipetineats.com/wp-content/uploads/2018/05/Fried-Chicken_5-SQ.jpg" class="card-img-top" alt="Chicken Tenders">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Tenders</h5>
+                    <p class="card-text">₱400 per kg</p>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Tenders">Choose Flavor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Flavor Selection Modal -->
+    <div class="modal fade" id="flavorModal" tabindex="-1" aria-labelledby="flavorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flavorModalLabel">Choose Your Flavor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="flavorForm">
+                        <div class="form-group">
+                            <label for="flavorSelect">Select Flavor:</label>
+                            <select class="form-control" id="flavorSelect" required>
+                                <option value="">Choose...</option>
+                                <option value="original">Original</option>
+                                <option value="spicy">Spicy</option>
+                                <option value="bbq">BBQ</option>
+                                <option value="lemon-pepper">Lemon Pepper</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sauceSelect">Select Sauce:</label>
+                            <select class="form-control" id="sauceSelect" required>
+                                <option value="">Choose...</option>
+                                <option value="ketchup">Ketchup</option>
+                                <option value="hot-sauce">Hot Sauce</option>
+                                <option value="barbecue-sauce">Barbecue Sauce</option>
+                                <option value="ranch">Ranch</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm Selection</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="container mt-5">
+        <h2>About Us</h2>
+        <p>Fried & Flyin is committed to offering the freshest and highest quality chicken products for your culinary needs.</p>
+    </section>
+
+    <section id="contact" class="container mt-5">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </section>
+
+    <footer class="text-center mt-5 py-4 bg-light">
+        <p>&copy; 2024 Fried & Flyin</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const flavorForm = document.getElementById('flavorForm');
+        const flavorSelect = document.getElementById('flavorSelect');
+        const sauceSelect = document.getElementById('sauceSelect');
+        let selectedProductButton;
+
+        // Capture the product button that opens the modal
+        $('#flavorModal').on('show.bs.modal', function (event) {
+            const button = $(event.relatedTarget);
+            selectedProductButton = button; // Store the button that triggered the modal
+        });
+
+        // Handle form submission
+        flavorForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const flavor = flavorSelect.value;
+            const sauce = sauceSelect.value;
+
+            if (flavor && sauce) {
+                // Change button text to "Ordered"
+                selectedProductButton.text("Ordered").removeClass('btn-success').addClass('btn-secondary').attr("disabled", true);
+                $('#flavorModal').modal('hide');
+
+                // Show the contact form section
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contact').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

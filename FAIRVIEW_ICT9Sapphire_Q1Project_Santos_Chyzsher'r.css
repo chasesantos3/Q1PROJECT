@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/014/214/130/non_2x/delicious-hot-and-crispy-fried-chicken-meat-free-photo.jpg');
+    background-size: cover; /* Covers the entire background */
+    background-position: center; /* Centers the image */
+    color: #8A5B3A; /* Dark Brown for text */
+}
+
+
+.card-title {
+    color: #C23A2E; /* Warm Red for card titles */
+}
+
+footer {
+    background-color: rgba(248, 249, 250, 0.8);
+    color: #8A5B3A; /* Dark Brown for footer text */
+    padding: 10px 0;
+}
+
+h2 {
+    text-shadow: 1px 1px 2px black; /* Adds shadow to headings for better visibility */
+}
+.card-img-top {
+    width: 1000%; /* Make image responsive */
+    height: 900px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/014/214/130/non_2x/delicious-hot-and-crispy-fried-chicken-meat-free-photo.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    color: white; /* Change text color for better contrast */
+}
+

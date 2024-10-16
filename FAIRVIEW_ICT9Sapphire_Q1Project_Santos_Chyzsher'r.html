@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fried & Flyin</title>
+</head>
+<body>
+    <header class="bg-warning text-dark text-center py-4">
+        <h1>Fried & Flyin</h1>
+        <p>Your go-to shop for delicious fried chicken!</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fried & Flyin</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="products" class="container mt-5">
+        <h2 class="text-center">Our Chicken Products</h2>
+        <div class="row">
+            <!-- Existing products -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.gimmesomeoven.com/wp-content/uploads/2015/05/Oven-Baked-Chicken-Breast-Recipe-3.jpg" class="card-img-top" alt="Chicken Breast" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Breast</h5>
+                        <p class="card-text">₱400 per bucket</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Breast">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2019/2/19/1/FN_Air-Fryer-Chicken-Wings-H_s4x3.jpg" class="card-img-top" alt="Chicken Wings" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Wings</h5>
+                        <p class="card-text">₱350 per bucket</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Wings">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScH3Sryzo5jMgDTOMazMkumcQdXxmI78BYag&s" class="card-img-top" alt="Chicken Thighs" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Thighs</h5>
+                        <p class="card-text">₱400 per plate</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Chicken Thighs">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+            <!-- New products -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5-VOw-A--qk1lWHgh1gKBL9f6Y6TA86xjErcwLeMz5OuCo3bivVzATAFb96OJ7SKQosM&usqp=CAU" class="card-img-top" alt="Roast Chicken" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Roast Chicken</h5>
+                        <p class="card-text">₱500 per plate</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Roast Chicken">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://sandersonfarms.com/wp-content/uploads/2022/09/Recipes_ChickenTenders_709x758-720x.png" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken Tenders</h5>
+                        <p class="card-text">₱450 per bucket</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Buffalo Wings">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXbMceyYdL4EZQzSmgFRGq-qqg6Sf3EuV-Vg&s" class="card-img-top" alt="Pan-Fried Chicken" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pan-Fried Chicken</h5>
+                        <p class="card-text">₱420 per bucket</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#flavorModal" data-product="Pan-Fried Chicken">Choose Flavor</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavor Selection Modal -->
+    <div class="modal fade" id="flavorModal" tabindex="-1" aria-labelledby="flavorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="flavorModalLabel">Choose Your Flavor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="flavorForm">
+                        <div class="form-group">
+                            <label for="flavorSelect">Select Flavor:</label>
+                            <select class="form-control" id="flavorSelect" required>
+                                <option value="">Choose...</option>
+                                <option value="original">Original</option>
+                                <option value="spicy">Spicy</option>
+                                <option value="bbq">BBQ</option>
+                                <option value="lemon-pepper">Lemon Pepper</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sauceSelect">Select Sauce:</label>
+                            <select class="form-control" id="sauceSelect" required>
+                                <option value="">Choose...</option>
+                                <option value="ketchup">Ketchup</option>
+                                <option value="hot-sauce">Hot Sauce</option>
+                                <option value="barbecue-sauce">Barbecue Sauce</option>
+                                <option value="ranch">Ranch</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm Selection</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="container mt-5">
+        <h2>About Us</h2>
+        <p>Fried & Flyin is committed to offering the freshest and highest quality chicken products for your culinary needs.</p>
+    </section>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Information</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <form class="mt-4">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                <h5 class="mt-4">Contact Information</h5>
+                <p>If you have any questions, feel free to reach us at:</p>
+                <p>Email: contact@friedandflyin.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Chicken Lane, Flavor Town</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 py-4 bg-light">
+        <p>&copy; 2024 Fried & Flyin</p>
+        <p><a href="https://docs.google.com/document/d/1fusVBFCQ3Z6wNzo15qFroKKIsMribI8Wpg0ItE4mlrY/edit" target="_blank">Sources</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const flavorForm = document.getElementById('flavorForm');
+        const flavorSelect = document.getElementById('flavorSelect');
+        const sauceSelect = document.getElementById('sauceSelect');
+        let selectedProductButton;
+
+        // Capture the product button that opens the modal
+        $('#flavorModal').on('show.bs.modal', function (event) {
+            const button = $(event.relatedTarget);
+            selectedProductButton = button; // Store the button that triggered the modal
+        });
+
+        // Handle form submission
+        flavorForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const flavor = flavorSelect.value;
+            const sauce = sauceSelect.value;
+
+            if (flavor && sauce) {
+                // Change button text to "Ordered"
+                selectedProductButton.text("Ordered").removeClass('btn-success').addClass('btn-secondary').attr("disabled", true);
+                $('#flavorModal').modal('hide');
+
+                // Show the contact form section
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contact').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
